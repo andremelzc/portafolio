@@ -1,9 +1,15 @@
+
+
 nav {
-    background-color:#FEF2F2;
+    position: sticky;
+    top:0;
+    background-color: #fef3f24b;
+    backdrop-filter: blur(10px); 
     display: flex;
     justify-content: flex-end;
     height: 60px;
     align-items: center;
+    z-index: 10000;
 }
 
 a {
@@ -13,4 +19,10 @@ a {
     line-height: normal;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0 30px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #470C08;
+    font-weight: 700px;
 }

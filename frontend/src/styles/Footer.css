@@ -1,0 +1,16 @@
+.footer-section {
+    background-color: #470C08;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-direction: column;
+    position: relative;
+}
+
+.footer-title{
+    color:#470C08;
+    font-size: 20px;
+    position:absolute;
+    top: 12%;
+}

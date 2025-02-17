@@ -1,8 +1,10 @@
 .home-section {
     background-color: #fef3f2;
-    height: 100vh;
+    height: calc(100vh - 60px);
+    display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .home-card {
@@ -43,3 +45,18 @@
     top: 78%;
 }
 
+.icons-card{
+    position:absolute;
+    top: 88%;
+}
+
+.icons-card a{
+    color:white;
+    font-size: 30px;
+    transition: transform 0.2s ease-in-out;
+    display: inline-block;
+}
+
+.icons-card a:hover {
+    transform: scale(1.2);
+}

@@ -1,0 +1,16 @@
+.formation-section {
+    background-color: #fef3f2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-direction: column;
+    position: relative;
+}
+
+.formation-title {
+    color:#000000;
+    font-size: 20px;
+    position:absolute;
+    top: 12%;
+}

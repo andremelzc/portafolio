@@ -4,12 +4,12 @@ import "../styles/NavBar.css";
 const NavBar = () => {
   return (
     <nav className="navbar">
-      <a>Home</a>
-      <a>Sobre mí</a>
-      <a>Formación</a>
-      <a>Habilidades</a>
-      <a>Proyectos</a>
-      <a>Contáctame</a>
+      <a href="#home">Home</a>
+      <a href="#about">Sobre mí</a>
+      <a href="#formation">Formación</a>
+      <a href="#skill">Habilidades</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#contact">Contáctame</a>
     </nav>
   );
 };
