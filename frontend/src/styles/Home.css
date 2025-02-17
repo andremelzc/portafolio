@@ -1,4 +1,45 @@
 .home-section {
     background-color: #fef3f2;
     height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
+
+.home-card {
+    background-color: #470C08;
+    border-radius: 300px 300px 60px 60px;
+    height: 500px;
+    width: 400px;
+    display: grid;
+    place-items: center;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.profile-image {
+    height: 300px;
+    width: 300px;
+    border-radius: 300px;
+    position: absolute;
+    top: 8%;
+}
+
+.h1-card{
+    color: white;
+    font-size: 25px;    
+    font-weight: 600;
+    position: absolute;
+    top: 72%;
+}
+
+.h2-card{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;    
+    position: absolute;
+    top: 78%;
+}
+
