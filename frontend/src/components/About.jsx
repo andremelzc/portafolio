@@ -1,4 +1,5 @@
 import React from "react";
+import { FaCode, FaPalette, FaGamepad, FaFilm } from "react-icons/fa";
 import "../styles/About.css";
 
 const About = () => {
@@ -51,10 +52,10 @@ const DatosPersonales = () => {
 
 const Intereses = () => {
   const intereses = [
-    { titulo: "Programación", logo: "https://via.placeholder.com/150" },
-    { titulo: "Música", logo: "https://via.placeholder.com/150" },
-    { titulo: "Videojuegos", logo: "https://via.placeholder.com/150" },
-    {titulo: "Películas", logo: "https://via.placeholder.com/150"}	
+    { titulo: "Programación", Icono: FaCode },
+    { titulo: "Música", Icono: FaPalette },
+    { titulo: "Videojuegos", Icono: FaGamepad },
+    { titulo: "Películas", Icono: FaFilm },
   ];
 
   return (
@@ -65,7 +66,7 @@ const Intereses = () => {
           <InteresCuadro
             key={index}
             titulo={intereses.titulo}
-            logo={intereses.logo}
+            Icono={intereses.Icono}
           />
         ))}
       </div>
@@ -73,10 +74,10 @@ const Intereses = () => {
   );
 };
 
-const InteresCuadro = ({ titulo, logo }) => {
+const InteresCuadro = ({ titulo, Icono }) => {
   return (
     <div className="interes-cuadro">
-      <img src={logo} alt={titulo} />
+      <Icono size={40} color="white" />
       <h3>{titulo}</h3>
     </div>
   );
