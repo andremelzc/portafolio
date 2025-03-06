@@ -4,7 +4,7 @@ import "../styles/NavBar.css";
 const NavBar = () => {
   return (
     <nav className="navbar">
-      <a href="#home">Home</a>
+      <a href="#">Home</a>
       <a href="#about">Sobre mí</a>
       <a href="#formation">Formación</a>
       <a href="#skill">Habilidades</a>

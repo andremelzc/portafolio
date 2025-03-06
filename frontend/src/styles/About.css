@@ -1,16 +1,103 @@
 .about-section {
     background-color: #FFE1E1;
-    height: 100vh;
+    min-height: 80vh;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;   
+    justify-content: flex-start;
+    align-items: flex-start;   
     flex-direction: column;
-    position: relative;
+
 }
 
-.about-title{
+.about-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.about-header h1 {
+    font-size: 2rem;
     color:#470C08;
-    font-size: 20px;
-    position:absolute;
-    top: 12%;
+    margin-bottom: 2rem;
+}
+
+.about-header p {
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+    text-align: justify;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 20rem);
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.datos-personales {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.datos-personales h2 {
+    font-size: 1.5rem;
+}
+
+.datos-personales ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 0.7rem;
+    margin-top: 2rem;
+}
+
+.datos-personales ul li {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    gap: 0.5rem;
+}
+
+.datos-personales ul li strong {
+    min-width: 120px; 
+    text-align: left;
+}
+
+.intereses {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.intereses-lista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem 2rem;
+    margin-top: 2rem;
+}
+
+.interes-cuadro {
+    width: 7.5rem;
+    height: 7.5rem;
+    background-color: #470C08;
+    border-radius: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.interes-cuadro h3 {
+    font-size: 0.8rem;
 }

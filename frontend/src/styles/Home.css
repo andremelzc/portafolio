@@ -1,53 +1,57 @@
 .home-section {
     background-color: #fef3f2;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 3.5rem);
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .home-card {
     background-color: #470C08;
     border-radius: 300px 300px 60px 60px;
-    height: 500px;
-    width: 400px;
-    display: grid;
-    place-items: center;
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 31rem;
+    width: 23rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 1rem;
+    transition: transform 0.1s ease-in-out;
+}
+
+.home-card:hover {
+    transform: scale(1.04);
 }
 
 .profile-image {
-    height: 300px;
-    width: 300px;
-    border-radius: 300px;
-    position: absolute;
-    top: 8%;
+    height: 18rem;
+    width: auto;
+    border-radius: 10rem;
+    margin-top: 0.6rem;
+    transition: transform 0.1s ease-in-out;
+}
+
+.profile-image:hover { 
+    transform: scale(1.04);
 }
 
 .h1-card{
     color: white;
-    font-size: 25px;    
+    font-size: 1.5rem;    
     font-weight: 600;
-    position: absolute;
-    top: 72%;
+    margin-top: 0.5rem;
 }
 
 .h2-card{
     color: white;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 400;    
-    position: absolute;
-    top: 78%;
+    margin-top: -0.8rem;
 }
 
 .icons-card{
-    position:absolute;
-    top: 88%;
+    margin-top: 0.8rem;
 }
 
 .icons-card a{
