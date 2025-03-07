@@ -1,16 +1,80 @@
 .formation-section {
-    background-color: #fef3f2;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-    flex-direction: column;
-    position: relative;
+  background-color: #fef3f2;
+  min-height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
-.formation-title {
-    color:#000000;
-    font-size: 1.25rem;
-    position:absolute;
-    top: 12%;
+.formation-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.formation-header h1 {
+  font-size: 2rem;
+  color: black;
+}
+
+.formation-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: calc(100% - 20rem);
+  justify-content: center;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  gap: 4rem;
+}
+
+.formacion-cuadro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 24rem;
+  background-color: #470c08;
+  border-radius: 2.2rem;
+  padding: 0.5rem;
+  color: white;
+}
+
+.formacion-imagen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+}
+
+.formacion-cuadro img {
+  width: 10rem;
+  height: auto;
+}
+
+.formacion-cuadro h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+.formacion-cuadro h3 {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.formacion-cuadro p {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.3rem;
 }

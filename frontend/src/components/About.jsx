@@ -25,6 +25,11 @@ const About = () => {
         <DatosPersonales />
         <Intereses />
       </div>
+
+      <div className="about-botones"> 
+        <button>Descargar CV</button>
+        <button>Contáctame</button>
+      </div>
     </section>
   );
 };
