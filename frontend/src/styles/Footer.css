@@ -1,5 +1,5 @@
 .footer-section {
-    background-color: #470C08;
+    background-color: #ffe1e1;
     height: 10vh;
     display: flex;
     justify-content: center;
@@ -8,9 +8,18 @@
     position: relative;
 }
 
-.footer-title{
-    color:#470C08;
-    font-size: 20px;
-    position:absolute;
-    top: 12%;
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background: #470c08;
+    width: 90%;
+    height: 0.01rem;
 }
