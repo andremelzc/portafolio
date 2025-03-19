@@ -61,6 +61,11 @@
   border: none;
 }
 
+.contact-content input:focus, 
+.contact-content textarea:focus {
+  outline: none;
+}
+
 .contact-content textarea {
   resize: none;
 }

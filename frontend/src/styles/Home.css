@@ -57,6 +57,7 @@
 .icons-card a{
     color:white;
     font-size: 30px;
+    margin: 0 1.5rem;
     transition: transform 0.2s ease-in-out;
     display: inline-block;
 }

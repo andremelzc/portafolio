@@ -1,8 +1,8 @@
-nav {
+.header {
     position: sticky;
-    top:0;
+    top: 0;
     background-color: #fef3f24b;
-    backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: flex-end;
     height: 3.5rem;
@@ -11,17 +11,31 @@ nav {
     z-index: 10000;
 }
 
-a {
-    color:black;
-    font-size: 1.2rem;
-    line-height: normal;
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    margin: 0 1.5rem;
-    text-decoration: none;
+.navbar a {
+  color: black;
+  font-size: 1.2rem;
+  line-height: normal;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  margin: 0 1.5rem;
+  text-decoration: none;
 }
 
-a:hover {
-    color: #470C08;
-    font-weight: 700px;
-    transform: scale(1.05);
+.navbar a:hover {
+  color: #470c08;
+  font-weight: 700px;
+  transform: scale(1.05);
+}
+
+.boton {
+  display: none;
+}
+
+@media (max-width: 995px){
+
+    .navbar {
+        display: none;
+    }
+    .boton {
+        display: block;
+    }
 }

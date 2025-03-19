@@ -1,6 +1,6 @@
 import React from "react";
-import UNMSM from "../assets/UniversidadNacionalMayorDeSanMarcos.png";
-import Britanico from "../assets/AsociacionCulturalPeruanaBritanica.png";
+import UNMSM from "../assets/logo_unmsm.png";
+import Britanico from "../assets/logo_acpb.png";
 import "../styles/Formation.css";
 
 const Formation = () => {
