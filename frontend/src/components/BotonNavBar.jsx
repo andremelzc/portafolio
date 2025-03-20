@@ -1,9 +1,12 @@
 import React from "react";
 import "../styles/BotonNavBar.css";
 
-const BotonNavBar = () => {
+const BotonNavBar = (props) => {
   return (
-    <div className="icon nav-icon-5">
+    <div
+      onClick={props.handleClick}
+      className={`icon nav-icon-5 ${props.clicked ? "open" : ""}`}
+    >
       <span></span>
       <span></span>
       <span></span>
