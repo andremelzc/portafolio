@@ -31,7 +31,7 @@ const Home = () => {
 
         <div className="icons">
           <a
-            href="https://github.com/andremelc"
+            href="https://github.com/andremelzc"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -45,7 +45,7 @@ const Home = () => {
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
           <a
-            href="https://www.instagram.com/andremelzc/"
+            href="https://www.instagram.com/andremelc/"
             target="_blank"
             rel="noopener noreferrer"
           >
