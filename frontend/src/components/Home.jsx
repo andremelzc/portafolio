@@ -21,11 +21,7 @@ const Home = () => {
         </div>
         <div className="container-presentation">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            vehicula, nisi nec facilisis cursus, justo erat tincidunt libero,
-            non tincidunt sapien eros nec libero. Curabitur ac felis nec urna
-            tincidunt tincidunt. Sed sit amet sapien ut libero venenatis
-            fermentum.
+            Estudiante de Ingeniería de Software en la Universidad Nacional Mayor de San Marcos enfocado en el Desarrollo Web Frontend.
           </p>
         </div>
 

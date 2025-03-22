@@ -70,7 +70,7 @@ const NavBar = () => {
           href="#contact"
           className={activeSection === "contact" ? "active" : ""}
         >
-          Contáctame
+          Contacto
         </a>
       </nav>
       <div className="boton">

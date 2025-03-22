@@ -1,5 +1,12 @@
 import React from "react";
-import { FaCode, FaPalette, FaGamepad, FaFilm } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaBirthdayCake,
+  FaLanguage,
+  FaUniversity,
+  FaCode,
+} from "react-icons/fa";
+import imagenEjemplo from "../assets/imagen_ejemplo.jpg";
 import "../styles/About.css";
 
 const About = () => {
@@ -7,83 +14,53 @@ const About = () => {
     <section className="about-section" id="about">
       <div className="about-header">
         <h1>Sobre mí</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          vehicula, nisi nec facilisis cursus, justo erat tincidunt libero, non
-          tincidunt sapien eros nec libero. Curabitur ac felis nec urna
-          tincidunt tincidunt. Sed sit amet sapien ut libero venenatis
-          fermentum. Proin euismod, ligula a facilisis fermentum, justo purus
-          gravida libero, nec scelerisque justo metus a libero. Integer nec
-          magna sit amet purus tincidunt tincidunt. Vivamus vel turpis nec
-          sapien scelerisque tincidunt. Donec vel felis at libero tincidunt
-          tincidunt. Nullam vehicula, nisi nec facilisis cursus, justo erat
-          tincidunt libero, non tincidunt sapien eros nec libero.
-        </p>
       </div>
-
       <div className="about-content">
-        <DatosPersonales />
-        <Intereses />
-      </div>
+        <div className="about-left">
+          <img src={imagenEjemplo} alt="Profile" className="image-profile-2" />
+        </div>
 
-      <div className="about-botones"> 
-        <button>Descargar CV</button>
-        <button>Contáctame</button>
+        <div className="about-right">
+          <p>
+            Soy Andre Meléndez Cava, estudiante de Ingeniería de Software en la
+            Universidad Nacional Mayor de San Marcos enfocado en el desarrollo
+            de aplicaciones web.
+          </p>
+          <p>
+            Me apasiona la resolución de problemas a través de la tecnología,
+            creando soluciones eficientes y optimizadas.
+          </p>
+          <p>
+            Mi objetivo es seguir creciendo como desarollador, participando en
+            proyectos innovadores y colaborando con equipos que buscan crear
+            impacto a través de la tecnología.
+          </p>
+          <div className="about-datos">
+            <div className="dato-item">
+              <FaMapMarkerAlt />
+              <span>Lima, Perú</span>
+            </div>
+            <div className="dato-item">
+              <FaLanguage />
+              <span>Español (nativo), Inglés</span>
+            </div>
+            <div className="dato-item">
+              <FaBirthdayCake />
+              <span>19 años</span>
+            </div>
+            <div className="dato-item">
+              <FaUniversity />
+              <span>Universidad Nacional Mayor de San Marcos</span>
+            </div>
+          </div>
+          <div className="about-botones">
+            <button>DECARGAR CV</button>
+            <button>CONTACTO</button>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
 export default About;
-
-const DatosPersonales = () => {
-  return (
-    <div className="datos-personales">
-      <h2>Datos Personales</h2>
-      <ul>
-        <li>
-          <strong>Cumpleaños: </strong> 19 - 07 - 2005
-        </li>
-        <li>
-          <strong>Email: </strong> andre050719mc@gmail.com
-        </li>
-        <li>
-          <strong>Residencia: </strong> Lima
-        </li>
-      </ul>
-    </div>
-  );
-};
-
-const Intereses = () => {
-  const intereses = [
-    { titulo: "Programación", Icono: FaCode },
-    { titulo: "Música", Icono: FaPalette },
-    { titulo: "Videojuegos", Icono: FaGamepad },
-    { titulo: "Películas", Icono: FaFilm },
-  ];
-
-  return (
-    <div className="intereses">
-      <h2>Intereses</h2>
-      <div className="intereses-lista">
-        {intereses.map((intereses, index) => (
-          <InteresCuadro
-            key={index}
-            titulo={intereses.titulo}
-            Icono={intereses.Icono}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const InteresCuadro = ({ titulo, Icono }) => {
-  return (
-    <div className="interes-cuadro">
-      <Icono size={40} color="white" />
-      <h3>{titulo}</h3>
-    </div>
-  );
-};
