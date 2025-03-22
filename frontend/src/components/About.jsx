@@ -10,6 +10,34 @@ import imagenEjemplo from "../assets/imagen_ejemplo.jpg";
 import "../styles/About.css";
 
 const About = () => {
+  // Mapeo de nombres a componentes de iconos
+  const Iconos = {
+    FaMapMarkerAlt: FaMapMarkerAlt,
+    FaLanguage: FaLanguage,
+    FaBirthdayCake: FaBirthdayCake,
+    FaUniversity: FaUniversity,
+  };
+
+  // Lista de datos personales
+  const DatosPersonales = [
+    {
+      icono: "FaMapMarkerAlt",
+      dato: "Lima, Perú",
+    },
+    {
+      icono: "FaLanguage",
+      dato: "Español (nativo), Inglés",
+    },
+    {
+      icono: "FaBirthdayCake",
+      dato: "19 años",
+    },
+    {
+      icono: "FaUniversity",
+      dato: "Universidad Nacional Mayor de San Marcos",
+    },
+  ];
+
   return (
     <section className="about-section" id="about">
       <div className="about-header">
@@ -31,30 +59,23 @@ const About = () => {
             creando soluciones eficientes y optimizadas.
           </p>
           <p>
-            Mi objetivo es seguir creciendo como desarollador, participando en
+            Mi objetivo es seguir creciendo como desarrollador, participando en
             proyectos innovadores y colaborando con equipos que buscan crear
             impacto a través de la tecnología.
           </p>
           <div className="about-datos">
-            <div className="dato-item">
-              <FaMapMarkerAlt />
-              <span>Lima, Perú</span>
-            </div>
-            <div className="dato-item">
-              <FaLanguage />
-              <span>Español (nativo), Inglés</span>
-            </div>
-            <div className="dato-item">
-              <FaBirthdayCake />
-              <span>19 años</span>
-            </div>
-            <div className="dato-item">
-              <FaUniversity />
-              <span>Universidad Nacional Mayor de San Marcos</span>
-            </div>
+            {DatosPersonales.map((item, index) => {
+              const Icono = Iconos[item.icono]; // Obtener el componente del ícono
+              return (
+                <div className="dato-item" key={index}>
+                  <Icono />
+                  <span>{item.dato}</span>
+                </div>
+              );
+            })}
           </div>
           <div className="about-botones">
-            <button>DECARGAR CV</button>
+            <button>DESCARGAR CV</button>
             <button>CONTACTO</button>
           </div>
         </div>

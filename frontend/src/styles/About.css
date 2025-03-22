@@ -32,14 +32,17 @@
 }
 
 .about-left {
-  width: 40%;
+  width: 42%;
+  max-width: 30rem;
   display: flex;
   justify-content: center;
 }
 
 .about-right {
-  width: 56%;
+  width: 54%;
   word-wrap: break-word;
+  display: flex;
+  justify-content: center;
 }
 
 .about-right p {
@@ -59,10 +62,15 @@
 }
 
 .dato-item {
-  display: flex;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.8rem;
   font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
+
+
 
 
 .about-botones {
@@ -80,4 +88,22 @@
   color: var(--background-color-1);
   font-size: 1rem;
   width: 100%;
+}
+
+@media (max-width: 1015px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .about-left {
+    width: 100%;
+  }
+
+  .about-right {
+    order: -1;
+    width: 100%;
+  }
 }

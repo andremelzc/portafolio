@@ -1,20 +1,15 @@
 .formation-section {
-  background-color: #fef3f2;
-  min-height: auto;
+  background-color: var(--background-color-1);
   width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   flex-direction: column;
+  padding: 5rem 0;
 }
 
 .formation-header {
   display: flex;
-  flex-direction: column;
-  width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
 }
 
 .formation-header h1 {
@@ -26,12 +21,10 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: calc(100% - 20rem);
   justify-content: center;
   margin-left: 10rem;
   margin-right: 10rem;
   margin-top: 4rem;
-  margin-bottom: 8rem;
   gap: 4rem;
 }
 

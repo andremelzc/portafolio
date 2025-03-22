@@ -13,8 +13,8 @@ const Formation = () => {
         <FormacionCuadro
           tituloImagen={UNMSM}
           titulo="Universidad Nacional Mayor de San Marcos"
-          especialidad="Ingeniería de Sistemas"
-          año="2018 - 2023"
+          especialidad="Ingeniería de Software"
+          año="2023 - 202X"
         />
         <FormacionCuadro
           tituloImagen={Britanico}

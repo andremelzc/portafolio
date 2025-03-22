@@ -21,7 +21,8 @@ const Home = () => {
         </div>
         <div className="container-presentation">
           <p>
-            Estudiante de Ingeniería de Software en la Universidad Nacional Mayor de San Marcos enfocado en el Desarrollo Web Frontend.
+            Estudiante de Ingeniería de Software en la Universidad Nacional
+            Mayor de San Marcos enfocado en el Desarrollo Web Frontend.
           </p>
         </div>
 
