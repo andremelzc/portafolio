@@ -1,10 +1,7 @@
 .contact-section {
-  background-color: #ffe1e1;
-  min-height: auto;
-  width: 100%;
+  background-color: var(--background-color-2);
+  padding: 5rem 0;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   flex-direction: column;
 }
 
@@ -14,7 +11,6 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
 }
 
 .contact-header h1 {
@@ -25,7 +21,6 @@
 .contact-content {
   width: 100%;
   margin-top: 4rem;
-  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,11 +42,11 @@
   color: white;
   font-weight: bold;
   font-size: 1.2rem;
-
 }
 
 .contact-content input,
 .contact-content textarea {
+  background-color: var(--background-color-2);
   width: 100%;
   border-radius: 5px;
   margin-top: 0.5rem;
@@ -61,7 +56,7 @@
   border: none;
 }
 
-.contact-content input:focus, 
+.contact-content input:focus,
 .contact-content textarea:focus {
   outline: none;
 }
@@ -78,6 +73,12 @@
   background-color: white;
   color: black;
   font-weight: bold;
-  margin-top:1rem;
+  margin-top: 1rem;
   font-size: 1.2rem;
+}
+
+@media (max-width: 1015px) {
+  .contact-section {
+    padding: 3rem 0;
+  }
 }

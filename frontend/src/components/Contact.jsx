@@ -5,14 +5,14 @@ const Contact = () => {
   return (
     <section className="contact-section" id="contact">
       <div className="contact-header">
-        <h1>Contáctame</h1>
+        <h1>Contacto</h1>
       </div>
       <div className="contact-content">
         <form>
           <label>Nombres y apellidos</label>
-          <input placeholder="Ingrese sus nombres y apellidos" />
+          <input placeholder="Escribe tu nombre" />
           <label>Correo electrónico</label>
-          <input placeholder="Ingrese su correo electrónico" />
+          <input placeholder="Escribe tu correo electrónico" />
           <label>Teléfono</label>
           <input placeholder="Ingrese su teléfono" />
           <label>Mensaje</label>

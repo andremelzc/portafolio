@@ -1,15 +1,12 @@
 .formation-section {
   background-color: var(--background-color-1);
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 5rem 0;
 }
 
 .formation-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .formation-header h1 {
@@ -19,25 +16,22 @@
 
 .formation-content {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 4rem;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .formacion-cuadro {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 20rem;
-  height: 24rem;
-  background-color: #470c08;
+  height: 22rem;
+  background-color: var(--detail-color-1);
   border-radius: 2.2rem;
-  padding: 0.5rem;
   color: white;
 }
 
@@ -50,7 +44,7 @@
 }
 
 .formacion-cuadro img {
-  width: 10rem;
+  width: 8.5rem;
   height: auto;
 }
 

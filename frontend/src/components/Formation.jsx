@@ -4,24 +4,35 @@ import Britanico from "../assets/logo_acpb.png";
 import "../styles/Formation.css";
 
 const Formation = () => {
+  const Formacion = [
+    {
+      tituloImagen: UNMSM,
+      titulo: "Universidad Nacional Mayor de San Marcos",
+      especialidad: "Ingeniería de Software",
+      año: "2023 - En curso",
+    },
+    {
+      tituloImagen: Britanico,
+      titulo: "Asociación Cultural Peruano Británica",
+      especialidad: "Inglés Avanzado",
+      año: "2020 - 2024",
+    },
+  ];
   return (
     <section className="formation-section" id="formation">
       <div className="formation-header">
         <h1>Formación</h1>
       </div>
       <div className="formation-content">
-        <FormacionCuadro
-          tituloImagen={UNMSM}
-          titulo="Universidad Nacional Mayor de San Marcos"
-          especialidad="Ingeniería de Software"
-          año="2023 - 202X"
-        />
-        <FormacionCuadro
-          tituloImagen={Britanico}
-          titulo="Asociación Cultural Peruano Británica"
-          especialidad="Inglés Avanzado"
-          año="2018 - 2023"
-        />
+        {Formacion.map((data, index) => (
+          <FormacionCuadro
+            key={index}
+            tituloImagen={data.tituloImagen}
+            titulo={data.titulo}
+            especialidad={data.especialidad}
+            año={data.año}
+          />
+        ))}
       </div>
     </section>
   );

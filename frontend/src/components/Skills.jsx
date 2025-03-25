@@ -7,6 +7,7 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaJs,
+  FaGitAlt,
 } from "react-icons/fa";
 import { SiCplusplus } from "react-icons/si";
 
@@ -18,12 +19,13 @@ const Skills = () => {
     { titulo: "CSS3", Icono: FaCss3Alt },
     { titulo: "JavaScript", Icono: FaJs },
     { titulo: "C++", Icono: SiCplusplus },
+    { titulo: "Git", Icono: FaGitAlt },
   ];
 
   return (
     <section className="skills-section" id="skill">
       <div className="skills-header">
-        <h1>Habilidades</h1>
+        <h1>Tecnologías</h1>
       </div>
       <div className="skills-content">
         {skills.map((skill, index) => (

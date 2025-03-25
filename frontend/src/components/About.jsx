@@ -55,10 +55,6 @@ const About = () => {
             de aplicaciones web.
           </p>
           <p>
-            Me apasiona la resolución de problemas a través de la tecnología,
-            creando soluciones eficientes y optimizadas.
-          </p>
-          <p>
             Mi objetivo es seguir creciendo como desarrollador, participando en
             proyectos innovadores y colaborando con equipos que buscan crear
             impacto a través de la tecnología.
