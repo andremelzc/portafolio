@@ -1,4 +1,5 @@
 import React from "react";
+import { FaUser, FaEnvelope, FaPhone, FaCommentAlt } from "react-icons/fa";
 import "../styles/Contact.css";
 
 const Contact = () => {
@@ -9,14 +10,27 @@ const Contact = () => {
       </div>
       <div className="contact-content">
         <form>
-          <label>Nombres y apellidos</label>
-          <input placeholder="Escribe tu nombre" />
-          <label>Correo electrónico</label>
-          <input placeholder="Escribe tu correo electrónico" />
-          <label>Teléfono</label>
-          <input placeholder="Ingrese su teléfono" />
-          <label>Mensaje</label>
-          <textarea placeholder="Ingrese su mensaje"></textarea>
+          <p>
+            Completa el formulario y me pondré en contacto contigo cuando pueda
+          </p>
+          <div className="contact-name">
+            <div className="contact-input-wrapper">
+              <FaUser className="contact-icon" />
+              <input placeholder="Nombre" className="contact-input" />
+            </div>
+            <div className="contact-input-wrapper">
+              <FaUser className="contact-icon" />
+              <input placeholder="Apellido" className="contact-input" />
+            </div>
+          </div>
+          <div className="contact-input-wrapper">
+            <FaEnvelope className="contact-icon" />
+            <input placeholder="Correo electrónico" className="contact-input" />
+          </div>
+          <div className="contact-input-wrapper textarea-wrapper">
+            <FaCommentAlt className="contact-icon" />
+            <textarea placeholder="Mensaje" className="contact-input"></textarea>
+          </div>
           <button>Enviar</button>
         </form>
       </div>
