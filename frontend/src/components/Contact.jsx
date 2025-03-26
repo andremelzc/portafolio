@@ -11,7 +11,7 @@ const Contact = () => {
       <div className="contact-content">
         <form>
           <p>
-            Completa el formulario y me pondré en contacto contigo cuando pueda
+            Completa el formulario y me pondré en contacto contigo lo más pronto posible
           </p>
           <div className="contact-name">
             <div className="contact-input-wrapper">

@@ -10,6 +10,7 @@ import {
   FaGitAlt,
 } from "react-icons/fa";
 import { SiCplusplus } from "react-icons/si";
+import SkillCard from "./SkillCard";
 
 const Skills = () => {
   const skills = [
@@ -37,16 +38,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-const SkillCard = ({ titulo, Icono }) => {
-  return (
-    <div className="skill-card">
-      <div className="skill-imagen-container">
-        <Icono size={60} color="white" />
-      </div>
-      <div className="skill-text-container">
-        <h2>{titulo}</h2>
-      </div>
-    </div>
-  );
-};

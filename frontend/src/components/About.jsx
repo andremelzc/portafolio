@@ -10,6 +10,9 @@ import imagenEjemplo from "../assets/imagen_ejemplo.jpg";
 import "../styles/About.css";
 
 const About = () => {
+  const goToContact = () => {
+    window.location.href = "#contact";
+  };
   // Mapeo de nombres a componentes de iconos
   const Iconos = {
     FaMapMarkerAlt: FaMapMarkerAlt,
@@ -71,8 +74,10 @@ const About = () => {
             })}
           </div>
           <div className="about-botones">
-            <button>DESCARGAR CV</button>
-            <button>CONTACTO</button>
+            <button className="border-btn">DESCARGAR CV</button>
+            <button onClick={goToContact} className="full-btn">
+              CONTACTO
+            </button>
           </div>
         </div>
       </div>

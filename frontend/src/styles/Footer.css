@@ -1,23 +1,23 @@
 .footer-section {
-    
-  background-color: var(--background-color-2);
+  background-color: var(--background-color-1);
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+  padding: 2rem 0;
 }
 
 .footer-content {
+  gap: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
 }
 
 .footer-icons {
   display: flex;
   justify-content: flex-start;
-  margin-top: 1.5rem;
   gap: 1.5rem;
 }
 
@@ -40,4 +40,9 @@
   background: #470c08;
   width: 90%;
   height: 0px;
+}
+
+.highlight {
+  color: var(--detail-color-1);
+  font-weight: bold;
 }

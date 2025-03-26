@@ -2,6 +2,7 @@ import React from "react";
 import UNMSM from "../assets/logo_unmsm.png";
 import Britanico from "../assets/logo_acpb.png";
 import "../styles/Formation.css";
+import FormationCard from "./FormationCard";
 
 const Formation = () => {
   const Formacion = [
@@ -25,7 +26,7 @@ const Formation = () => {
       </div>
       <div className="formation-content">
         {Formacion.map((data, index) => (
-          <FormacionCuadro
+          <FormationCard
             key={index}
             tituloImagen={data.tituloImagen}
             titulo={data.titulo}

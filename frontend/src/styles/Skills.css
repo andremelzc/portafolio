@@ -31,31 +31,3 @@
   font-size: 2rem;
   color: black;
 }
-
-.skill-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #470c08;
-  border-radius: 25px;
-  width: 8rem;
-  height: 8rem;
-
-}
-
-.skill-imagen-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 60%;
-}
-
-.skill-text-container {
-  color:white;
-}
-
-.skill-text-container h2 {
-  font-size: 1rem;
-}

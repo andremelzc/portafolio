@@ -35,7 +35,7 @@ const Footer = () => {
           </a>
         </div>
         <p>
-          Made by <span>@andremelc</span> | 2025
+          Made by <span className="highlight">@andremelc</span> | 2025
         </p>
       </div>
     </footer>

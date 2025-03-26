@@ -81,11 +81,40 @@
 .about-botones button {
   padding: 0.5rem 1rem;
   border: none;
-  border-radius: 4px;
-  background-color: var(--detail-color-1);
-  color: var(--background-color-1);
+  border-radius: 10px;
   font-size: 1rem;
   width: 100%;
+  font-weight: 600;
+}
+
+.about-botones .border-btn {
+  border: 2px solid var(--detail-color-1);
+  background-color: var(--background-color-2);
+  color: var(--detail-color-1);
+  transition: all 0.3s ease;
+}
+
+.about-botones .border-btn:hover {
+  background-color: var(--background-color-3);
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+
+.about-botones .full-btn {
+  background-color: var(--detail-color-1);
+  color: var(--background-color-2);
+  transition: all 0.3s ease;
+}
+
+.about-botones .full-btn:hover {
+  background-color: var(--detail-color-2);
+  color: var(--background-color-2);
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 1015px) {
