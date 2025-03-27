@@ -8,8 +8,12 @@ import {
 } from "react-icons/fa";
 import imagenEjemplo from "../assets/imagen_ejemplo.jpg";
 import "../styles/About.css";
+import "../styles/Animations.css";
+import useScrollAnimation from "../util/useScrollAnimation";
 
 const About = () => {
+  const { ref, visible } = useScrollAnimation(0.3);
+
   const goToContact = () => {
     window.location.href = "#contact";
   };
@@ -43,15 +47,23 @@ const About = () => {
 
   return (
     <section className="about-section" id="about">
-      <div className="about-header">
+      <div
+        ref={ref}
+        className={`about-header ${visible ? "fade-in" : "fade-out"}`}
+      >
         <h1>Sobre mí</h1>
       </div>
       <div className="about-content">
-        <div className="about-left">
+        <div ref={ref} className={`about-left ${visible ? "fade-in" : "fade-out"}`}>
           <img src={imagenEjemplo} alt="Profile" className="image-profile-2" />
         </div>
 
-        <div className="about-right">
+        <div
+          ref={ref}
+          className={`about-right ${
+            visible ? "slide-in-right" : "slide-out-right"
+          }`}
+        >
           <p>
             Soy Andre Meléndez Cava, estudiante de Ingeniería de Software en la
             Universidad Nacional Mayor de San Marcos enfocado en el desarrollo

@@ -1,10 +1,12 @@
 import React from "react";
+import useScrollAnimation from "../util/useScrollAnimation";
 import "../styles/Projects.css";
 
 const Projects = () => {
+  const { ref, visible } = useScrollAnimation(0.2);
   return (
     <section className="projects-section" id="projects">
-      <div className="projects-header">
+      <div ref={ref} className={`projects-header ${visible ? "fade-in" : "fade-out"}`}>
         <h1>Proyectos</h1>
       </div>
       <div className="projects-content">
