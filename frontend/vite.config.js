@@ -4,5 +4,8 @@ import react from '@vitejs/plugin-react-swc'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/portafolio/'
+  build: {
+    outDir: '../dist', // Esta es la clave - salida un nivel arriba de frontend
+    emptyOutDir: true, // Limpia el directorio de salida antes de construir
+  },
 })
