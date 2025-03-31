@@ -2,9 +2,13 @@ import React from "react";
 import UNMSM from "../assets/logo_unmsm.png";
 import Britanico from "../assets/logo_acpb.png";
 import "../styles/Formation.css";
+import "../styles/Animations.css";
 import FormationCard from "./FormationCard";
+import useScrollAnimation from "../util/UseScrollAnimation"; 
 
 const Formation = () => {
+  const { ref, visible } = useScrollAnimation(0.2);
+
   const Formacion = [
     {
       tituloImagen: UNMSM,
@@ -21,7 +25,7 @@ const Formation = () => {
   ];
   return (
     <section className="formation-section" id="formation">
-      <div className="formation-header">
+      <div ref={ref} className={`formation-header ${visible ? "fade-in" : "fade-out"}`}>
         <h1>Formación</h1>
       </div>
       <div className="formation-content">
@@ -40,18 +44,3 @@ const Formation = () => {
 };
 
 export default Formation;
-
-const FormacionCuadro = ({ tituloImagen, titulo, especialidad, año }) => {
-  return (
-    <div className="formacion-cuadro">
-      <div className="formacion-imagen-container">
-        <img src={tituloImagen} alt={titulo} />
-      </div>
-      <div className="formacion-text-container">
-        <h2>{titulo}</h2>
-        <h3>{especialidad}</h3>
-        <p>{año}</p>
-      </div>
-    </div>
-  );
-};

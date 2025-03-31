@@ -1,9 +1,12 @@
 import React from "react";
 import "../styles/SkillCard.css";
+import "../styles/Animations.css";
+import useScrollAnimation from "../util/UseScrollAnimation";
 
 const SkillCard = ({ titulo, Icono }) => {
+  const { ref, visible } = useScrollAnimation(0.2);
   return (
-    <div className="skill-card">
+    <div ref={ref} className={`skill-card ${visible ? "fade-in" : "fade-out"}`}>
       <div className="skill-imagen-container">
         <Icono size={60} color="white" />
       </div>

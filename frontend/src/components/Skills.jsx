@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/Skills.css";
+import "../styles/Animations.css";
+import useScrollAnimation from "../util/UseScrollAnimation";
 import {
   FaReact,
   FaNodeJs,
@@ -13,6 +15,7 @@ import { SiCplusplus } from "react-icons/si";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
+  const { ref, visible } = useScrollAnimation(0.2);
   const skills = [
     { titulo: "React", Icono: FaReact },
     { titulo: "Python", Icono: FaPython },
@@ -25,7 +28,7 @@ const Skills = () => {
 
   return (
     <section className="skills-section" id="skill">
-      <div className="skills-header">
+      <div ref={ref} className={`skills-header ${visible ? "fade-in" : "fade-out"}`}>
         <h1>Tecnologías</h1>
       </div>
       <div className="skills-content">

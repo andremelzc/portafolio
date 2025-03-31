@@ -1,14 +1,17 @@
 import React from "react";
 import { FaUser, FaEnvelope, FaPhone, FaCommentAlt } from "react-icons/fa";
 import "../styles/Contact.css";
+import "../styles/Animations.css";
+import UseScrollAnimation from "../util/UseScrollAnimation";
 
 const Contact = () => {
+  const { ref, visible } = UseScrollAnimation(0.3);
   return (
     <section className="contact-section" id="contact">
-      <div className="contact-header">
+      <div ref={ref} className={`contact-header ${visible ? "fade-in" : "fade-out"}`}>
         <h1>Contacto</h1>
       </div>
-      <div className="contact-content">
+      <div ref={ref} className={`contact-content ${visible ? "fade-in" : "fade-out"}`}>
         <form>
           <p>
             Completa el formulario y me pondré en contacto contigo lo más pronto posible

@@ -9,10 +9,10 @@ import {
 import imagenEjemplo from "../assets/imagen_ejemplo.jpg";
 import "../styles/About.css";
 import "../styles/Animations.css";
-import useScrollAnimation from "../util/useScrollAnimation";
+import UseScrollAnimation from "../util/UseScrollAnimation";
 
 const About = () => {
-  const { ref, visible } = useScrollAnimation(0.3);
+  const { ref, visible } = UseScrollAnimation(0.3);
 
   const goToContact = () => {
     window.location.href = "#contact";

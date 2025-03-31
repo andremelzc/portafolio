@@ -1,21 +1,32 @@
-import React from "react";
 import { useEffect, useState, useRef } from "react";
 
-const useScrollAnimation = (threshold) => {
+const UseScrollAnimation = (threshold = 0.5, delay = 300) => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
+  let timeoutId = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => setVisible(entry.isIntersecting),
+      ([entry]) => {
+        clearTimeout(timeoutId.current);
+        if (entry.isIntersecting) {
+          setVisible(true);
+        } else {
+          timeoutId.current = setTimeout(() => setVisible(false), delay);
+        }
+      },
       { threshold }
     );
 
     if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
+
+    return () => {
+      clearTimeout(timeoutId.current);
+      if (ref.current) observer.unobserve(ref.current);
+    };
+  }, [threshold, delay]);
 
   return { ref, visible };
 };
 
-export default useScrollAnimation;
+export default UseScrollAnimation;

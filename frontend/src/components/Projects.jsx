@@ -1,5 +1,5 @@
 import React from "react";
-import useScrollAnimation from "../util/useScrollAnimation";
+import useScrollAnimation from "../util/UseScrollAnimation";
 import "../styles/Projects.css";
 
 const Projects = () => {
