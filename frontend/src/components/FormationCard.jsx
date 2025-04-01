@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/FormationCard.css";
 import "../styles/Animations.css";
-import useScrollAnimation from "../util/UseScrollAnimation"; 
+import UseScrollAnimation from "../util/UseScrollAnimation";
 
 const FormationCard = ({ tituloImagen, titulo, especialidad, año }) => {
-  const { ref, visible } = useScrollAnimation(0.2);
+  const { ref, visible } = UseScrollAnimation(0.2);
   return (
     <div ref={ref} className={`formacion-cuadro ${visible ? "fade-in" : "fade-out"}`}>
       <div className="formacion-imagen-container">

@@ -7,10 +7,10 @@ import {
   faLinkedin,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import useScrollAnimation from "../util/UseScrollAnimation";
+import UseScrollAnimation from "../util/UseScrollAnimation";
 
 const Home = () => {
-  const { ref, visible } = useScrollAnimation(0.2);
+  const { ref, visible } = UseScrollAnimation(0.2);
 
   return (
     <section className={`home-section`} id="home">
