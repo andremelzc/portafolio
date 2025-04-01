@@ -4,10 +4,10 @@ import Britanico from "../assets/logo_acpb.png";
 import "../styles/Formation.css";
 import "../styles/Animations.css";
 import FormationCard from "./FormationCard";
-import useScrollAnimation from "../util/UseScrollAnimation"; 
+import UseScrollAnimation from "../util/UseScrollAnimation";
 
 const Formation = () => {
-  const { ref, visible } = useScrollAnimation(0.2);
+  const { ref, visible } = UseScrollAnimation(0.2);
 
   const Formacion = [
     {
