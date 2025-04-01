@@ -97,5 +97,26 @@
 @media (max-width: 1015px) {
   .contact-section {
     padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  .contact-content {
+    width: 85%;
+  }
+
+  .contact-name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .contact-content {
+    width: 90%;
+  }
+
 }

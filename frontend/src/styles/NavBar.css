@@ -9,6 +9,7 @@
   width: 100vw;
   align-items: center;
   z-index: 10000;
+  margin-bottom: 0;
 }
 
 .navbar {
@@ -53,7 +54,7 @@
   .links-background {
     position: fixed;
     top: 5rem;
-    right: -50%;
+    right: -150%;
     width: 50%;
     height: 500%;
     background-color: var(--background-color-2);
@@ -79,7 +80,7 @@
   .navbar {
     position: absolute;
     top: 70px;
-    right: -25%;
+    right: -125%;
     transform: translateX(50%);
     margin-top: 5%;
     display: flex;

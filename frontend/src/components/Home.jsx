@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Home.css";
+import "../styles/Animations.css";
 import imagenEjemplo from "../assets/imagen_ejemplo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

@@ -1,5 +1,6 @@
 .btn-go {
     position: fixed;
+    z-index: 10;
     height: 2rem;
     width: 2rem;
     background-color: var(--detail-color-1);
@@ -7,7 +8,7 @@
     right: 4rem;
     bottom: 4rem;
     border: none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
     opacity: 0;
     pointer-events: none; 
     transition: all 0.5s ease;
