@@ -1,7 +1,6 @@
 .about-section {
   background-color: var(--background-color-2);
   padding: 5rem 0;
-  width: 100vw;
 }
 
 .about-header {
@@ -144,5 +143,13 @@
   .about-right {
     order: -1;
     width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-datos {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
   }
 }

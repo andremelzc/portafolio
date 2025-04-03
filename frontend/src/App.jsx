@@ -15,6 +15,7 @@ function App() {
       <NavBar />
       <ButtonGoStart />
       <Home />
+      <About />
       <Formation />
       <Skills />
       <Projects />
