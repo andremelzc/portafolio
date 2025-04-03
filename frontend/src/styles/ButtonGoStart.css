@@ -33,3 +33,10 @@
     left: 50%;
     transform: translate(-50%, -40%) rotate(-45deg);
   }
+
+  @media (max-width: 760px) {
+    .btn-go {
+      right: 2rem;
+      bottom: 2rem;
+    }
+  }
