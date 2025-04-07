@@ -1,13 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaUser, FaEnvelope, FaPhone, FaCommentAlt } from "react-icons/fa";
 import "../styles/Contact.css";
 import "../styles/Animations.css";
 import useEmailForm from "../util/useEmailForm";
 import UseScrollAnimation from "../util/UseScrollAnimation";
+import NotificationCard from "./NotificationCard";
 
 const Contact = () => {
   const { ref, visible } = UseScrollAnimation(0.3);
+
+  // Hook para manejar el envío de correos
   const { sendEmail, loading, success, error } = useEmailForm();
+
+  // Hook para manejar la notificación
+  const [notification, setNotification] = useState({
+    show: false,
+    message: "",
+    type: "",
+  });
 
   // Objeto para almacenar los datos del formulario
   const [formData, setFormData] = useState({
@@ -18,54 +28,119 @@ const Contact = () => {
     message: "",
   });
 
+  // Función para manejar la notificación
+  useEffect(() => {
+    if (success) {
+      setNotification({
+        show: true,
+        message: "Correo enviado con éxito",
+        type: "success",
+      });
+    }
+    if (error) {
+      setNotification({
+        show: true,
+        message: "Error al enviar el correo",
+        type: "error",
+      });
+    }
+  }, [success, error]);
+
   // Función para manejar el cambio de los inputs
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+
+    if (name == "name") {
+      setFormData((prev) => ({
+        ...prev,
+        title: `Hey! Quiero contactarme contigo - ${value}`,
+      }));
+    }
   };
+
+  // Función para setear un timer para ocultar la notificación
+  useEffect(() => {
+    if (notification.show) {
+      const timer = setTimeout(() => {
+        setNotification({ show: false, message: "", type: "" });
+      }, 3000); // 3 segundos
+
+      return () => clearTimeout(timer); // Limpiar el timer al desmontar el componente
+    }
+  }, [notification.show]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Enviando...", formData);
+    console.log("Enviando...");
 
     // Validación: Todos los campos son obligatorios
     if (!formData.name || !formData.email || !formData.message) {
-      alert("Por favor, completa todos los campos.");
+      setNotification({
+        show: true,
+        message: "Por favor, completa todos los campos.",
+        type: "error",
+      });
       return;
     }
 
-    // Validación: No inputs con espacios vacíos  
+    // Validación: No inputs con espacios vacíos
     if (formData.name.trim() === "" || formData.email.trim() === "") {
-      alert("Por favor, completa todos los campos.");
+      setNotification({
+        show: true,
+        message: "Por favor, completa todos los campos.",
+        type: "error",
+      });
+      return;
+    }
+
+    // Validación: El nombre debe tener al menos 3 caracteres
+    if (formData.name.length < 3) {
+      setNotification({
+        show: true,
+        message: "El nombre debe tener al menos 3 caracteres.",
+        type: "error",
+      });
       return;
     }
 
     // Validación: El correo electrónico debe ser válido
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(formData.email)) {
-      alert("Por favor, ingresa un correo electrónico válido.");
+      setNotification({
+        show: true,
+        message: "Correo electrónico inválido",
+        type: "error",
+      });
       return;
     }
-    
+
     // Validación: El mensaje debe tener al menos 10 caracteres
     if (formData.message.length < 10) {
-      alert("El mensaje debe tener al menos 10 caracteres.");
+      setNotification({
+        show: true,
+        message: "El mensaje debe tener al menos 10 caracteres.",
+        type: "error",
+      });
       return;
     }
 
     // Validación: El mensaje es muy largo
     if (formData.message.length > 500) {
-      alert("El mensaje es demasiado largo. Máximo 500 caracteres.");
+      setNotification({
+        show: true,
+        message: "El mensaje es demasiado largo.",
+        type: "error",
+      });
       return;
     }
 
-    // Validación: El nombre debe tener al menos 3 caracteres
-    if (formData.name.length < 3) {
-      alert("El nombre debe tener al menos 3 caracteres.");
-      return;
-    }
+    formData.time = new Date().toLocaleString("es-ES", {
+      timeZone: "America/Lima",
+    });
 
-    await sendEmail(formData);
+    //await sendEmail(formData);
+    console.log("Enviado", formData);
   };
 
   return (
@@ -118,6 +193,14 @@ const Contact = () => {
           <button>Enviar</button>
         </form>
       </div>
+      {notification.show && (
+        <div>
+          <NotificationCard
+            message={notification.message}
+            type={notification.type}
+          />
+        </div>
+      )}
     </section>
   );
 };
