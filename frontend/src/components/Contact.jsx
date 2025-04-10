@@ -17,6 +17,7 @@ const Contact = () => {
     show: false,
     message: "",
     type: "",
+    animation: "fade-in",
   });
 
   // Objeto para almacenar los datos del formulario
@@ -35,6 +36,7 @@ const Contact = () => {
         show: true,
         message: "Correo enviado con éxito",
         type: "success",
+        animation: "slide-in",
       });
     }
     if (error) {
@@ -62,11 +64,26 @@ const Contact = () => {
   // Función para setear un timer para ocultar la notificación
   useEffect(() => {
     if (notification.show) {
-      const timer = setTimeout(() => {
-        setNotification({ show: false, message: "", type: "" });
-      }, 3000); // 3 segundos
+      const exitTimer = setTimeout(() => {
+        setNotification((prev) => ({
+          ...prev,
+          animation: "slide-out",
+        }));
+      }, 2500); // empieza a salir a los 2.5s
 
-      return () => clearTimeout(timer); // Limpiar el timer al desmontar el componente
+      const clearTimer = setTimeout(() => {
+        setNotification({
+          show: false,
+          message: "",
+          type: "",
+          animation: "",
+        });
+      }, 3000); // se desmonta cuando termina la animación
+
+      return () => {
+        clearTimeout(exitTimer);
+        clearTimeout(clearTimer);
+      };
     }
   }, [notification.show]);
 
@@ -80,6 +97,7 @@ const Contact = () => {
         show: true,
         message: "Por favor, completa todos los campos.",
         type: "error",
+        animation: "slide-in",
       });
       return;
     }
@@ -90,6 +108,7 @@ const Contact = () => {
         show: true,
         message: "Por favor, completa todos los campos.",
         type: "error",
+        animation: "slide-in",
       });
       return;
     }
@@ -100,6 +119,7 @@ const Contact = () => {
         show: true,
         message: "El nombre debe tener al menos 3 caracteres.",
         type: "error",
+        animation: "slide-in",
       });
       return;
     }
@@ -111,6 +131,7 @@ const Contact = () => {
         show: true,
         message: "Correo electrónico inválido",
         type: "error",
+        animation: "slide-in",
       });
       return;
     }
@@ -121,6 +142,7 @@ const Contact = () => {
         show: true,
         message: "El mensaje debe tener al menos 10 caracteres.",
         type: "error",
+        animation: "slide-in",
       });
       return;
     }
@@ -131,6 +153,7 @@ const Contact = () => {
         show: true,
         message: "El mensaje es demasiado largo.",
         type: "error",
+        animation: "slide-in",
       });
       return;
     }
@@ -139,7 +162,7 @@ const Contact = () => {
       timeZone: "America/Lima",
     });
 
-    //await sendEmail(formData);
+    await sendEmail(formData);
     console.log("Enviado", formData);
   };
 
@@ -198,6 +221,7 @@ const Contact = () => {
           <NotificationCard
             message={notification.message}
             type={notification.type}
+            animation={notification.animation}
           />
         </div>
       )}
