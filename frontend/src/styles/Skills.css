@@ -1,12 +1,12 @@
 .skills-section {
-  background-color: #ffe1e1;
+  background-color: var(--background-color-2);
   min-height: auto;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 .skills-header {
@@ -29,10 +29,20 @@
 
 .skills-header h1 {
   font-size: 2rem;
-  color: black;
+  color: var(--detail-color-1);
+}
+
+@media(max-width: 1015px) {
+  .skills-section {
+    padding: 4rem 0;
+  }
+  .skills-header h1 {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 760px) {
+  
   .skills-content {
     grid-template-columns: repeat(2, 7.5rem);
     grid-template-rows: repeat(4, 7.5rem);

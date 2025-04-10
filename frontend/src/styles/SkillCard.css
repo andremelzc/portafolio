@@ -18,6 +18,10 @@
   height: 60%;
 }
 
+.skill-imagen-container svg {
+  color: var(--background-color-1);
+}
+
 .skill-text-container {
   display: none;
   transition: all 0.2s ease-in-out;
@@ -43,10 +47,5 @@
 
 .skill-text-container h2 {
   font-size: 1rem;
-}
-
-@media (max-width: 760px) {
-  .skills-card {
-
-  }
+  font-weight: 400;
 }

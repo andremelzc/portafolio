@@ -20,8 +20,8 @@
 
 .formacion-imagen-container img {
   max-width: 8.5rem;
-  max-height: 100%; 
-  object-fit: contain; 
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .formacion-text-container {
@@ -36,19 +36,21 @@
 .formacion-cuadro h2 {
   font-size: 1.1rem;
   text-align: center;
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .formacion-cuadro h3 {
+  color: var(--background-color-2);
   font-size: 1rem;
+  font-weight: 600;
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
 }
 
 .formacion-cuadro p {
   font-size: 1rem;
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
 }
 
 .formacion-cuadro:hover {

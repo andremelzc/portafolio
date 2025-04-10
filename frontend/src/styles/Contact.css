@@ -15,7 +15,7 @@
 
 .contact-header h1 {
   font-size: 2rem;
-  color: black;
+  color: var(--detail-color-1);
 }
 
 .contact-content {
@@ -101,7 +101,7 @@
 
 @media (max-width: 1015px) {
   .contact-section {
-    padding: 3rem 0;
+    padding: 4rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -9,29 +9,22 @@
   transform: translateY(40px);
 }
 
-
 .projects-section {
-  background-color: #fef3f2;
-  min-height: auto;
-  width: 100%;
+  background-color: var(--background-color-1);
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   flex-direction: column;
+  padding: 4rem 0;
 }
 
 .projects-header {
   display: flex;
-  flex-direction: column;
-  width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
 }
 
 .projects-header h1 {
   font-size: 2rem;
-  color: black;
+  color: var(--background-color-0);
 }
 
 .projects-content {
@@ -40,7 +33,6 @@
   align-items: center;
   width: 100%;
   margin-top: 4rem;
-  margin-bottom: 5rem;
 }
 
 .error-504 {
@@ -53,18 +45,17 @@
   background-color: white;
   border-radius: 25px;
   position: relative;
-  
 }
 
 .error-504 h2 {
-    margin-top: 10%;
-    font-size: 3.5rem;
-    color: black;
+  margin-top: 10%;
+  font-size: 3.5rem;
+  color: black;
 }
 
 .error-504 p {
-    font-size: 1.5rem;
-    color: black;
+  font-size: 1.5rem;
+  color: black;
 }
 
 .error-504::after {
@@ -75,4 +66,14 @@
   position: absolute;
   border-radius: 25px 25px 0px 0px;
   top: 0;
+}
+
+@media (max-width: 1015px) {
+  .projects-section {
+    padding: 4rem 0;
+  }
+
+  .projects-header h1 {
+    font-size: 1.8rem;
+  }
 }

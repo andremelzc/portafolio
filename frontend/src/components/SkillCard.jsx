@@ -8,7 +8,7 @@ const SkillCard = ({ titulo, Icono }) => {
   return (
     <div ref={ref} className={`skill-card ${visible ? "fade-in" : "fade-out"}`}>
       <div className="skill-imagen-container">
-        <Icono size={60} color="white" />
+        <Icono size={60} />
       </div>
       <div className="skill-text-container">
         <h2>{titulo}</h2>

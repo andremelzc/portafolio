@@ -68,7 +68,7 @@
 @media (max-width: 760px){
   .notification-wrapper{
     left: 0;
-    bottom: 1rem;
+    bottom: 6.5rem;
     width: 100%;
     display: flex;
     justify-content: center;

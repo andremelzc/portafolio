@@ -1,6 +1,6 @@
 .about-section {
   background-color: var(--background-color-2);
-  padding: 5rem 0;
+  padding: 4rem 0;
   overflow: hidden;
 }
 
@@ -11,7 +11,7 @@
 
 .about-header h1 {
   font-size: 2rem;
-  color: #470c08;
+  color: var(--detail-color-1);
 }
 
 .about-content {
@@ -66,15 +66,14 @@
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 0.8rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .about-botones {
   display: flex;
-  justify-content: center;
   margin-top: 2rem;
-  gap: 5%;
+  gap: 3rem;
 }
 
 .about-botones button {
@@ -137,13 +136,20 @@
   }
 
   .about-left img {
-    width: 70%;
+    width: 60%;
     height: auto;
   }
+
   .about-right {
+    margin-top: -1rem;
     order: -1;
     width: 100%;
   }
+
+  .about-header h1 {
+    font-size: 1.8rem;
+  }
+
 }
 
 @media (max-width: 760px) {
@@ -154,7 +160,7 @@
   }
 
   .about-left img {
-    width: 16rem;
+    width: 15rem;
     border-radius: 4rem;
   }
 }
