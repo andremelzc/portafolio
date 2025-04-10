@@ -162,8 +162,16 @@ const Contact = () => {
       timeZone: "America/Lima",
     });
 
-    await sendEmail(formData);
+    //await sendEmail(formData);
     console.log("Enviado", formData);
+    //return;
+
+    setNotification({
+      show: true,
+      message: "No se encuentra disponible el formulario en este momento",
+      type: "error",
+      animation: "slide-in",
+    });
   };
 
   return (
