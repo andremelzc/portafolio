@@ -6,7 +6,7 @@
 }
 
 .notification-card {
-  background-color: #f8f9fa;
+  background-color: var(--background-color-1);
   width: 16rem;
   height: 5rem;
   border-radius: 1rem;
@@ -68,7 +68,7 @@
 @media (max-width: 760px){
   .notification-wrapper{
     left: 0;
-    bottom: 10rem;
+    bottom: 1rem;
     width: 100%;
     display: flex;
     justify-content: center;
