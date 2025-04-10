@@ -64,3 +64,14 @@
 .slide-out {
   animation: slideOut 0.3s ease-out forwards;
 }
+
+@media (max-width: 760px){
+  .notification-wrapper{
+    left: 0;
+    bottom: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

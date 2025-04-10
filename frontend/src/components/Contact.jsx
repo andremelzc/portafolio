@@ -225,7 +225,7 @@ const Contact = () => {
         </form>
       </div>
       {notification.show && (
-        <div>
+        <div className="notification-wrapper">
           <NotificationCard
             message={notification.message}
             type={notification.type}
