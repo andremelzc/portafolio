@@ -19,7 +19,7 @@
 }
 
 .skill-imagen-container svg {
-  color: var(--background-color-1);
+  color: var(--background-color-0);
 }
 
 .skill-text-container {
@@ -28,7 +28,7 @@
 }
 
 .skill-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: all 0.2s ease-in-out;
 }
 

@@ -9,6 +9,7 @@ html {
     --primary-color: #e22c20;
     --secundary-color: #fd756c;
     --tertiary-color: #e22c20;
+    --background-color-0: #ffffff;
     --background-color-1: #fef3f2;
     --background-color-1-transparent: #fef3f24b;
     --background-color-2: #ffe3e1;
@@ -18,7 +19,8 @@ html {
     --detail-color-3: #9d2017;
     --detail-color-2: #82211a;
     --detail-color-1: #470c08;
-    --detail-color-0: #000000;;
+    --detail-color-0: #000000;
+    --detail-color-0-transparent: #00000052;
 }
 
 * {
