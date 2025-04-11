@@ -33,7 +33,7 @@ const About = () => {
     },
     {
       icono: "FaLanguage",
-      dato: "Español (nativo), Inglés",
+      dato: "Español (nativo), Inglés avanzado",
     },
     {
       icono: "FaBirthdayCake",

@@ -149,7 +149,6 @@
   .about-header h1 {
     font-size: 1.8rem;
   }
-
 }
 
 @media (max-width: 760px) {
@@ -162,5 +161,11 @@
   .about-left img {
     width: 15rem;
     border-radius: 4rem;
+  }
+
+  .about-botones {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }

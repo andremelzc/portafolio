@@ -162,9 +162,9 @@ const Contact = () => {
       timeZone: "America/Lima",
     });
 
-    //await sendEmail(formData);
+    await sendEmail(formData);
     console.log("Enviado", formData);
-    //return;
+    return;
 
     setNotification({
       show: true,
