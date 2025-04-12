@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { FaUser, FaEnvelope, FaPhone, FaCommentAlt } from "react-icons/fa";
 import "../styles/Contact.css";
 import "../styles/Animations.css";
+import useScrollAnimation from "../util/useScrollAnimation";
 import useEmailForm from "../util/useEmailForm";
-import UseScrollAnimation from "../util/UseScrollAnimation";
 import NotificationCard from "./NotificationCard";
 
 const Contact = () => {
-  const { ref, visible } = UseScrollAnimation(0.3);
+  const { ref, visible } = useScrollAnimation(0.3);
 
   // Hook para manejar el envío de correos
   const { sendEmail, loading, success, error } = useEmailForm();

@@ -1,11 +1,11 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import UseScrollAnimation from "../util/UseScrollAnimation";
+import useScrollAnimation from "../util/useScrollAnimation";
 import "../styles/Projects.css";
 import portafolio from "../assets/proyecto_portafolio.png";
 
 const Projects = () => {
-  const { ref, visible } = UseScrollAnimation(0.2);
+  const { ref, visible } = useScrollAnimation(0.2);
   return (
     <section className="projects-section" id="projects">
       <div

@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Skills.css";
 import "../styles/Animations.css";
-import UseScrollAnimation from "../util/UseScrollAnimation";
+import useScrollAnimation from "../util/useScrollAnimation";
 import {
   FaReact,
   FaNodeJs,
@@ -15,7 +15,7 @@ import { SiCplusplus } from "react-icons/si";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
-  const { ref, visible } = UseScrollAnimation(0.2);
+  const { ref, visible } = useScrollAnimation(0.2);
   const skills = [
     { titulo: "React", Icono: FaReact },
     { titulo: "Python", Icono: FaPython },
