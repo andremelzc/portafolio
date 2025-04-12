@@ -12,7 +12,8 @@ import "../styles/Animations.css";
 import useScrollAnimation from "../util/useScrollAnimation";
 
 const About = () => {
-  const { ref, visible } = useScrollAnimation(0.3);
+  const header = useScrollAnimation(0.05);
+  const content = useScrollAnimation(0.05);
 
   const goToContact = () => {
     window.location.href = "#contact";
@@ -28,7 +29,7 @@ const About = () => {
   // Lista de datos personales
   const DatosPersonales = [
     {
-      icono: "FaMapMarkerAlt",
+      icono: "FaMapMarkerAlt", 
       dato: "Lima, Perú",
     },
     {
@@ -48,20 +49,20 @@ const About = () => {
   return (
     <section className="about-section" id="about">
       <div
-        ref={ref}
-        className={`about-header ${visible ? "fade-in" : "fade-out"}`}
+        ref={header.ref}
+        className={`about-header ${header.visible ? "fade-in" : "fade-out"}`}
       >
         <h1>Sobre mí</h1>
       </div>
-      <div className="about-content">
-        <div ref={ref} className={`about-left ${visible ? "fade-in" : "fade-out"}`}>
+      <div ref={content.ref} className="about-content">
+        <div ref={content.ref} className={`about-left ${content.visible ? "fade-in" : "fade-out"}`}>
           <img src={imagenEjemplo} alt="Profile" className="image-profile-2" />
         </div>
 
         <div
-          ref={ref}
+          ref={content.ref}
           className={`about-right ${
-            visible ? "slide-in-right" : "slide-out-right"
+            content.visible ? "slide-in-right" : "slide-out-right"
           }`}
         >
           <p>

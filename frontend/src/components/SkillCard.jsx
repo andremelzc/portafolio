@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/SkillCard.css";
 import "../styles/Animations.css";
-import useScrollAnimation from "../util/UseScrollAnimation";
+import useScrollAnimation from "../util/useScrollAnimation";
 
 const SkillCard = ({ titulo, Icono }) => {
   const { ref, visible } = useScrollAnimation(0.2);

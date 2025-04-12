@@ -11,7 +11,7 @@ import {
 import useScrollAnimation from "../util/useScrollAnimation";
 
 const Home = () => {
-  const { ref, visible } = useScrollAnimation(0.2);
+  const { ref, visible } = useScrollAnimation(0.05);
 
   return (
     <section className={`home-section`} id="home">

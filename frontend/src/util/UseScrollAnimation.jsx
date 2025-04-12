@@ -1,6 +1,7 @@
+import React from "react";
 import { useEffect, useState, useRef } from "react";
 
-const useScrollAnimation = (threshold = 0.5, delay = 300) => { // ss
+export default function useScrollAnimation(threshold = 0.05, delay = 300) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
   let timeoutId = useRef(null);
@@ -27,6 +28,4 @@ const useScrollAnimation = (threshold = 0.5, delay = 300) => { // ss
   }, [threshold, delay]);
 
   return { ref, visible };
-};
-
-export default useScrollAnimation;
+}

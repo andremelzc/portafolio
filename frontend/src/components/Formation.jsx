@@ -7,7 +7,7 @@ import FormationCard from "./FormationCard";
 import useScrollAnimation from "../util/useScrollAnimation";
 
 const Formation = () => {
-  const { ref, visible } = useScrollAnimation(0.2);
+  const { ref, visible } = useScrollAnimation(0.05);
 
   const Formacion = [
     {

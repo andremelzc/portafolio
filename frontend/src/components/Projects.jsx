@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 import useScrollAnimation from "../util/useScrollAnimation";
 import "../styles/Projects.css";
 import portafolio from "../assets/proyecto_portafolio.png";
+import "../styles/Animations.css"; 
 
 const Projects = () => {
   const { ref, visible } = useScrollAnimation(0.2);

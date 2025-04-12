@@ -11,6 +11,8 @@ import {
   FaGithub,
   FaEye,
 } from "react-icons/fa";
+import "../styles/Animations.css";
+import useScrollAnimation from "../util/useScrollAnimation";
 
 const ProjectCard = ({ project, image, tecnologias, botones }) => {
   const tecnologiasIconos = [
@@ -27,8 +29,11 @@ const ProjectCard = ({ project, image, tecnologias, botones }) => {
     { titulo: "github", Icono: FaGithub },
     { titulo: "preview", Icono: FaEye },
   ];
+
+  const { ref, visible } = useScrollAnimation(0.05);
+
   return (
-    <div className="project-card">
+    <div ref={ref} className={`project-card ${visible ? "fade-in" : "fade-out"}`}>
       <div className="project-card-image">
         <img src={image} alt={project} className="project-image" />
         <div className="project-card-image-overlay">
