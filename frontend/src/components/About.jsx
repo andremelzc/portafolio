@@ -7,6 +7,8 @@ import {
   FaCode,
 } from "react-icons/fa";
 import imagenEjemplo from "../assets/imagen_ejemplo.jpg";
+import imagenPerfil from "../assets/imagen_perfil.jpg";
+import imagenPerfil2 from "../assets/imagen_perfil2.jpg";
 import "../styles/About.css";
 import "../styles/Animations.css";
 import useScrollAnimation from "../util/useScrollAnimation";
@@ -18,6 +20,14 @@ const About = () => {
   const goToContact = () => {
     window.location.href = "#contact";
   };
+
+  const goToDrive = () => {
+    window.open(
+      "https://drive.google.com/file/d/1i6oeaf9w4jEZQCrE-87D9_OZMx6ptS8p/view?usp=sharing",
+      "_blank"
+    );
+  };
+
   // Mapeo de nombres a componentes de iconos
   const Iconos = {
     FaMapMarkerAlt: FaMapMarkerAlt,
@@ -29,7 +39,7 @@ const About = () => {
   // Lista de datos personales
   const DatosPersonales = [
     {
-      icono: "FaMapMarkerAlt", 
+      icono: "FaMapMarkerAlt",
       dato: "Lima, Perú",
     },
     {
@@ -55,8 +65,11 @@ const About = () => {
         <h1>Sobre mí</h1>
       </div>
       <div ref={content.ref} className="about-content">
-        <div ref={content.ref} className={`about-left ${content.visible ? "fade-in" : "fade-out"}`}>
-          <img src={imagenEjemplo} alt="Profile" className="image-profile-2" />
+        <div
+          ref={content.ref}
+          className={`about-left ${content.visible ? "fade-in" : "fade-out"}`}
+        >
+          <img src={imagenPerfil} alt="Profile" className="image-profile-2" />
         </div>
 
         <div
@@ -87,7 +100,9 @@ const About = () => {
             })}
           </div>
           <div className="about-botones">
-            <button className="border-btn">DESCARGAR CV</button>
+            <button onClick={goToDrive} className="border-btn">
+              DESCARGAR CV
+            </button>
             <button onClick={goToContact} className="full-btn">
               CONTACTO
             </button>

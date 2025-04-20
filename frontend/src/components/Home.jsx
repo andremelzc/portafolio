@@ -2,6 +2,8 @@ import React from "react";
 import "../styles/Home.css";
 import "../styles/Animations.css";
 import imagenEjemplo from "../assets/imagen_ejemplo.jpg";
+import imagenPerfil from "../assets/imagen_perfil.jpg";
+import imagenPerfil2 from "../assets/imagen_perfil2.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -55,7 +57,7 @@ const Home = () => {
         </div>
       </div>
       <div ref={ref} className={`home-right ${visible ? "fade-in" : "fade-out"}`}>
-        <img src={imagenEjemplo} alt="Profile" className="image-profile" />
+        <img src={imagenPerfil2} alt="Profile" className="image-profile" />
       </div>
     </section>
   );

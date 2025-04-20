@@ -115,6 +115,19 @@
   transition: all 0.3s ease;
 }
 
+.image-profile-2 {
+  max-width: 5rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-profile-2:hover {
+  transform: scale(1.04);
+}
+
 @media (max-width: 1015px) {
   .about-section {
     padding: 3rem 0;
