@@ -25,7 +25,7 @@ Este proyecto es mi portafolio personal como estudiante de Ingeniería de Softwa
 ## 📄 Demo
 
 Puedes ver el portafolio desplegado en:  
-🔗 [https://tusitio.com](https://portafolio-seven-wheat.vercel.app/)
+🔗 [https://portafolio-seven-wheat.vercel.app/](https://portafolio-seven-wheat.vercel.app/)
 
 ---
 
