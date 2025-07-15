@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 import useScrollAnimation from "../util/useScrollAnimation";
 import "../styles/Projects.css";
 import portafolio from "../assets/proyecto_portafolio.png";
+import ecommerce from "../assets/proyecto_ecommerce.png";
 import "../styles/Animations.css"; 
 
 const Projects = () => {
@@ -28,6 +29,19 @@ const Projects = () => {
             },
           ]}
         />
+        <ProjectCard
+          project={"Sistema Ecommerce"}
+          image={ecommerce}
+          tecnologias={["NextJS", "React", "TypeScript", "TailwindCSS", "MySQL"]}
+          botones={[
+            { tipo: "github", url: "https://github.com/andremelzc/ecommerce" }
+            /*{
+              tipo: "preview",
+              url: "https://portafolio-seven-wheat.vercel.app/",
+            },*/
+          ]}
+        />
+        
         {/*<div className="error-504">
           <h2>504</h2>
           <p>Gateway Timeout</p>

@@ -11,19 +11,36 @@ import {
   FaJs,
   FaGitAlt,
 } from "react-icons/fa";
-import { SiCplusplus } from "react-icons/si";
+import { 
+  SiCplusplus,
+  SiTypescript,
+  SiTailwindcss,
+  SiMysql,
+  SiNextdotjs,
+} from "react-icons/si";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
   const { ref, visible } = useScrollAnimation(0.2);
   const skills = [
+    // Frontend (Alta prioridad)
     { titulo: "React", Icono: FaReact },
-    { titulo: "Python", Icono: FaPython },
+    { titulo: "NextJS", Icono: SiNextdotjs },
+    { titulo: "JavaScript", Icono: FaJs },
+    { titulo: "TypeScript", Icono: SiTypescript },
+    { titulo: "TailwindCSS", Icono: SiTailwindcss },
+    
+    // Fundamentos web (Media-alta prioridad)
     { titulo: "HTML5", Icono: FaHtml5 },
     { titulo: "CSS3", Icono: FaCss3Alt },
-    { titulo: "JavaScript", Icono: FaJs },
-    { titulo: "C++", Icono: SiCplusplus },
+    
+    // Backend & Database (Media prioridad)
+    { titulo: "Python", Icono: FaPython },
+    { titulo: "MySQL", Icono: SiMysql },
+    
+    // Herramientas & Otros (Media-baja prioridad)
     { titulo: "Git", Icono: FaGitAlt },
+    { titulo: "C++", Icono: SiCplusplus },
   ];
 
   return (

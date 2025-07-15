@@ -33,6 +33,7 @@
   align-items: center;
   width: 100%;
   margin-top: 4rem;
+  gap: 3rem;
 }
 
 .error-504 {
@@ -70,10 +71,45 @@
 
 @media (max-width: 1015px) {
   .projects-section {
-    padding: 4rem 0;
+    padding: 3rem 1rem;
   }
 
   .projects-header h1 {
     font-size: 1.8rem;
+  }
+
+  .projects-content {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .projects-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .projects-content {
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .projects-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .projects-content {
+    gap: 2rem;
+    margin-top: 2.5rem;
   }
 }
