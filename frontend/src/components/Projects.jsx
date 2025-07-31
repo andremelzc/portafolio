@@ -47,7 +47,11 @@ const Projects = () => {
         image={clima}
         tecnologias={["React", "NodeJS", "TailwindCSS"]}
         botones={[
-          { tipo: "github", url: "https://github.com/andremelzc/clima_app"}
+          { tipo: "github", url: "https://github.com/andremelzc/clima_app"},
+          {
+            tipo: "preview",
+            url: "https://clima-app-opal.vercel.app/",
+          }
         ]}
         />
         
