@@ -4,6 +4,7 @@ import useScrollAnimation from "../util/useScrollAnimation";
 import "../styles/Projects.css";
 import portafolio from "../assets/proyecto_portafolio.png";
 import ecommerce from "../assets/proyecto_ecommerce.png";
+import clima from "../assets/proyecto_clima.png";
 import "../styles/Animations.css"; 
 
 const Projects = () => {
@@ -40,6 +41,14 @@ const Projects = () => {
               url: "https://portafolio-seven-wheat.vercel.app/",
             },*/
           ]}
+        />
+        <ProjectCard
+        project={"Clima App"}
+        image={clima}
+        tecnologias={["React", "NodeJS", "TailwindCSS"]}
+        botones={[
+          { tipo: "github", url: "https://github.com/andremelzc/clima_app"}
+        ]}
         />
         
         {/*<div className="error-504">

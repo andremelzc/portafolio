@@ -23,7 +23,7 @@ const About = () => {
 
   const goToDrive = () => {
     window.open(
-      "https://drive.google.com/file/d/1i6oeaf9w4jEZQCrE-87D9_OZMx6ptS8p/view?usp=sharing",
+      "https://drive.google.com/file/d/1xlhLqMircjueat35YtQH8ZkAKSHrB5_a/view?usp=sharing",
       "_blank"
     );
   };
